@@ -27,3 +27,19 @@ public with sharing class OppClosedWonDeletionValidation {
         }
     }
 }
+/* Hello Reviewer, I initially tried this code but somehow this logic couldn't pass through the test but later
+ improvised to the above with the help of a friend in the cohort. Can you please comment on the below code too?
+
+ 
+public with sharing class OppClosedWonDeletionValidation {
+    public static void oppsToBeDeleted (List<Opportunity> deletedOpps) {
+        for(Opportunity opp : deletedOpps ){
+            if(opp.StageName == 'Closed Won' && opp.Account.Industry.equals('Banking') ){
+                opp.addError('Cannot delete closed opportunity for a banking account that is won');
+            }
+        }
+    }
+}
+*/
+
+
